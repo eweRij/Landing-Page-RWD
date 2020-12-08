@@ -1,0 +1,46 @@
+
+//oraz mixin na display flex column
+@mixin image() {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 20rem;
+    border-radius: 5px;
+    @content; 
+}
+
+.images {
+    article {
+        background-color:white;
+        margin: 2rem;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        .image_bckgr-1 {
+            @include image();
+            background:black url(../assets/pic01.jpg) no-repeat center/cover;
+        }
+        .image_bckgr-2 {
+            @include image();
+            background:black url(../assets/pic02.jpg) no-repeat center/cover;
+        }
+        .image_bckgr-3 {
+            @include image();
+            background: black url(../assets/pic03.jpg) no-repeat center/cover;
+        }
+        .title{
+            padding : 1.5rem;
+        }
+        .article_description{
+            padding: 1.5rem;
+        }
+    }
+}
+@media screen and (min-width: 690px) { 
+        .images {
+            display: flex;
+            justify-content: space-evenly;
+        }
+}

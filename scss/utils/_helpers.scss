@@ -1,0 +1,40 @@
+.d-flex {
+    display: flex;
+}
+
+.flex-justify-between {
+    justify-content: space-between;
+}
+
+.flex-align-items-center {
+    align-items: center;
+}
+
+.btn {
+    margin: 1rem 0;
+    background: gray;
+    padding: 1rem;
+    font-size: 2rem;
+    border: 0;
+    border-radius: 5px;
+    &-primary{
+        background-color: #1691C3 ;
+        color: white;
+    }
+}
+.btn-lg{
+    width: 100%;
+    background-color: #1691C3 ;
+    border-radius: 5px;
+    border: none;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-weight: 900;
+    font-size: 1.5rem;
+    color: white;
+    margin-top: 2rem;
+    i {
+        padding-right : 1rem;
+    }
+}

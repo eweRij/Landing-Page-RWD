@@ -1,0 +1,64 @@
+$list : "../assets/pic01.jpg", "../assets/pic02.jpg","../assets/pic03.jpg", "../assets/pic04.jpg";
+.about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 1rem 0;
+    padding:1rem;
+    .about-description {
+        line-height: 2rem;
+        padding-bottom: 2rem;
+        border-bottom: 2px solid rgba($color: #444444, $alpha: 0.5) ;
+    }
+    .about-images {
+        .squer {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            div {
+                display: flex;
+                justify-content: space-between;
+                @for $i from 1 through 4 {
+                    .image#{$i} {
+                    background:url(nth($list,$i)) no-repeat center/cover;
+                    width: 50%;
+                    height: 15rem;
+                    margin-bottom: 1rem;
+                    border-radius: 5% 5%;
+                }
+            }
+            }
+    }
+    }  
+}
+@media screen and (min-width: 690px) { 
+   .about {
+        width: 100%;
+        padding:1rem;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+       .about-description {
+           flex :1.5;
+           padding:2rem;
+           border: none;
+           button{
+               width: 50%;
+               font-size: 1rem;
+           }
+       }
+       .about-images {
+           padding:2rem;
+           flex:1;
+           height: 50%;
+           @for $i from 1 through 4 {
+            .image#{$i} {
+            height: 10px;
+        }}
+           button{
+            width: 50%;
+            font-size: 1rem;
+        }
+       }
+    }
+}

@@ -1,0 +1,111 @@
+.header {
+  justify-content: center;
+  align-items: center;
+}
+.logo {
+  padding-top: 7rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  &__title {
+    background: #fc4887;
+    color: white;
+    font-size: 3rem;
+    font-weight: 900;
+    font-style: italic;
+    padding: 1rem;
+    border-radius: 5px;
+  }
+  &__subtitle {
+    align-self: center;
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 10px 0 0 0;
+  }
+}
+#menu-trigger {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
+.menu {
+  display: none;
+  list-style: none;
+  li {
+    display: inline-block;
+    padding: 0 1rem;
+    &.active {
+      background: darkgrey;
+      border-radius: 5px;
+      padding: 3px 5px;
+      a {
+        color: white;
+      }
+    }
+    &:last-child {
+      padding-right: 0;
+    }
+    a {
+      text-decoration: none;
+      color: gray;
+    }
+  }
+}
+body,
+.menu {
+  transition: 2s;
+}
+body.moved {
+  margin-left: 50vw;
+}
+
+#menu-trigger {
+  margin: 10px;
+  border: 0;
+  font-size: 3rem;
+  background: none;
+  outline: none;
+} //bardzo wazne przy hamburgerze!!!!!
+.mobile-section.opened {
+  //ta klase trzeba dodac po kliknieciu w hamburgera na mobilce!!
+  .menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    padding: 2rem;
+    width: 50vw;
+    background: #f1f1f1;
+    height: 100vh;
+    top: 15%;
+    list-style: none;
+    left: 0;
+    li {
+      padding: 0.5rem 0;
+      a {
+        color: black;
+        text-decoration: none;
+      }
+    }
+  }
+}
+@media screen and (min-width: 650px) {
+  #menu-trigger {
+    display: none;
+  }
+  .menu {
+    display: block;
+  }
+  .logo {
+    display: block;
+    padding: 0;
+    &__subtitle {
+      padding-left: 1rem;
+    }
+  }
+  .header {
+    padding-top: 2rem;
+    justify-content: space-between;
+  }
+}

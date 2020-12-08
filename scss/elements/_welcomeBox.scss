@@ -1,0 +1,46 @@
+.welcomeBox {
+    background: white;
+    border-radius: 5px;
+    margin: 3rem;
+    padding: 2rem;     
+    &__headers {
+        text-align: center;
+        margin-bottom: 1rem;
+        h1 {
+            font-size: 2.5rem;
+            line-height: 3rem;
+        }
+        p {
+            font-size: 1.5rem;
+            line-height: 2rem;
+        }
+    }  
+    &__buttons {
+        button {
+            width: 100%;
+            display: block;            
+        }
+
+    }
+}
+@media screen and (min-width:690px) { 
+    .welcomeBox { 
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 3rem 0;
+        &__headers {
+            text-align: left;
+        }
+        &__buttons {
+            button {
+                display: flex;
+                flex-direction: row-reverse;
+                align-items: center;
+                i {
+                    margin-left: 1rem;
+                }
+            }
+        }
+    }
+}
